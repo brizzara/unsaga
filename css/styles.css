@@ -1,1 +1,354 @@
+@charset "utf-8";
 
+*,*::before,*::after{box-sizing:border-box}html{-moz-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role='list'],ol[role='list']{list-style:none}body{min-height:100vh;line-height:1.5}h1,h2,h3,h4,button,input,label{line-height:1.1}h1,h2,h3,h4{text-wrap:balance}a:not([class]){text-decoration-skip-ink:auto;color:currentColor}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}textarea:not([rows]){min-height:10em}:target{scroll-margin-block:5ex}
+
+body {
+/*    font-family: "メイリオ", "Meirio", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;*/
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    position: relative;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 40px;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+header nav {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    box-shadow: 0px 2px 2px rgba(200, 200, 200, 0.5);
+    text-align: center;
+    line-height: 40px;
+}
+header nav .logo {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    color: #fff;
+}
+header nav .logo:hover,
+header nav .logo:link,
+header nav .logo:visited {
+    text-decoration: none;
+}
+header nav .tool-name {
+    font-family: "メイリオ", "Meirio", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+footer {
+    width: 100%;
+    margin: 80px auto 0;
+    padding: 10px;
+    background: linear-gradient(to bottom, #8720ED,#3D20ED);
+}
+footer .sns {
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+footer .sns li {
+    margin: 0 7px;
+}
+footer .copyright {
+    text-align: center;
+}
+#target-element {
+    padding: 15px 0;
+}
+.skill-panel {
+    position: relative;
+    width: 375px;
+    height: 335px;
+    margin: 0 auto 30px;
+    background: #fff;
+    box-sizing: border-box;
+}
+.skill-panel .panel {
+    width: 125px;
+    position: absolute;
+}
+.skill-panel .panel.upper-left {
+    right: calc(50% - 9px);
+    top: 0;
+}
+.skill-panel .panel.upper-right {
+    left: calc(50% - 9px);
+    top: 0;
+}
+.skill-panel .panel.middle-left {
+    left: 18px;
+    top: 100px;
+}
+.skill-panel .panel.middle {
+    left: calc(50% - 125px / 2);
+    top: 100px;
+}
+.skill-panel .panel.middle-right {
+    right: 18px;
+    top: 100px;
+}
+.skill-panel .panel.lower-left {
+    right: calc(50% - 9px);
+    bottom: 0;
+}
+.skill-panel .panel.lower-right {
+    left: calc(50% - 9px);
+    bottom: 0;
+}
+.parameter {
+    position: relative;
+    width: 375px;
+    margin: 0 auto;
+}
+.parameter .desc {
+    position: absolute;
+    top: -7px;
+    left: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+.parameter .gauge {
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.parameter .gauge span {
+    position: relative;
+    width: 42px;
+    height: 24px;
+    background: #fff;
+    border: solid 2px #333;
+    border-left: solid 1px #333;
+    border-right: solid 1px #333;
+}
+.parameter .gauge span:first-child {
+    border-left: solid 2px #333;
+}
+.parameter .gauge span:last-child {
+    border-right: solid 2px #333;
+}
+.parameter .gauge span var {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    text-shadow: 1px 1px 2px #333;
+}
+.parameter .gauge span.L1 {
+    background: #72fd4a;
+}
+.parameter .gauge span.L2 {
+    background: #3982eb;
+}
+.parameter .gauge span.L3 {
+    background: #fecbfd;
+}
+.parameter .gauge span.L4 {
+    background: #ff8B40;
+}
+.parameter .gauge span.L5 {
+    background: #ffcb52;
+}
+.parameter .indicator {
+    position: relative;
+    width: 210px;
+    height: 1px;
+    border-top: solid 2px #333;
+    margin: 15px auto;
+    font-size: 12px;
+}
+.parameter .indicator::after {
+    content: '';
+    width: 16px;
+    height: 2px;
+    background: #333;
+    position: absolute;
+    bottom: -5px;
+    right: -2px;
+    transform: rotate(-45deg);
+}
+.parameter .indicator .low {
+    position: absolute;
+    top: -15px;
+    left: -77px;
+}
+.parameter .indicator .high {
+    position: absolute;
+    top: -15px;
+    right: -45px;
+}
+.nickname {
+    width: 210px;
+    margin: 0 auto;
+}
+.nickname input {
+    width: 100%;
+}
+#button-download {
+    width: 210px;
+    margin: 60px auto;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+#button-download span {
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+.panel svg {
+    stroke:#000000;
+}
+.panel.focused svg {
+    stroke: red;
+}
+.panel .container {
+    position: relative;
+    width: 100%;
+}
+.panel .container .skill {
+    width: 85%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.3;
+    text-shadow: 1px 1px 2px #333;
+}
+.panel .container .skill span{
+    display: inline-block;
+}
+.panel .container .skill var {
+    display: block;
+    font-size: 14px;
+}
+.panel.L1 .container .skill,
+.panel.L3 .container .skill {
+    color: #333;
+    text-shadow: 1px 1px 2px #fff;
+}
+.panel svg {
+/*    transform: rotate(30deg); */
+    fill: #e0e0e0;
+}
+.panel.L1 svg {
+    fill: #72fd4a;
+}
+.panel.L2 svg {
+    fill: #3982eb;
+}
+.panel.L3 svg {
+    fill: #fecbfd;
+}
+.panel.L4 svg {
+    fill: #ff8B40;
+}
+.panel.L5 svg {
+    fill: #ffcb52;
+}
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+.modal-overlay .modal-content {
+    width: 310px;
+    height: 300px;
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    background: rgba(255,255,255,1.0);
+/*    backdrop-filter: blur(3px); */
+    padding: 10px;
+}
+.modal-overlay .modal-content .label {
+    position: absolute;
+    top: -30px;
+    left: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+.modal-overlay .modal-content .label span {
+    display: inline-block;
+}
+.modal-overlay .modal-content .label span:first-child {
+    margin-right: 70px;
+}
+.setting {
+    padding: 3px;
+    border: solid 2px rgba(255,255,255,0.5);
+    box-sizing: border-box;
+}
+.setting.selected {
+    border: solid 2px red;
+}
+.setting select {
+    width: 50px;
+    height: 30px;
+    background: none;
+    outline: none;
+    text-align: center;
+}
+.setting input {
+    width: 210px;
+    height: 30px;
+    background: none;
+    outline: none;
+    text-align: left;
+}
+
+.close-button {
+    position: absolute;
+    top: -30px;
+    right: -20px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+}
+
+@media screen and (min-width: 784px) {
+    .skill-panel {
+        margin: 60px auto;
+    }
+    #button-download {
+        margin: 80px auto;
+    }
+}
