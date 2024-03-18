@@ -360,15 +360,17 @@ footer {
                 text-align: center;
                 border: none;
                 border: 1px solid var(--border-color);
+                color: var(--base-txt-color);
             }
             & > input {
-                width: 225px;
+                width: 215px;
                 height: 30px;
                 background: none;
                 outline: none;
                 text-align: left;
                 border: none;
                 border: 1px solid var(--border-color);
+                border-radius: 0;
             }
         }
         .close-button {
