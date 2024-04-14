@@ -343,7 +343,7 @@ footer .copyright {
 .modal-overlay .modal-content .label > span {
     display: inline-block;
 }
-.modal-overlay .modal-content .label:first-child {
+.modal-overlay .modal-content .label > span:first-child {
     margin-right: 70px;
 }
 .modal-overlay .modal-content .setting {
