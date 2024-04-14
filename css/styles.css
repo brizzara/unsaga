@@ -371,6 +371,7 @@ footer .copyright {
     text-align: left;
     border: none;
     border: 1px solid var(--border-color);
+    border-radius: 0;
 }
 .modal-overlay .modal-content .close-button {
     position: absolute;
